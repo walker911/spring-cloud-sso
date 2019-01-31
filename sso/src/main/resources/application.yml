@@ -9,8 +9,10 @@ security:
     sso:
       login-path: /login
     client:
-      client-id: client-id
-      client-secret: client-secret
+      # github oauth application client id
+      client-id:
+      # github oauth application client secret
+      client-secret:
       access-token-uri: https://github.com/login/oauth/access_token
       user-authorization-uri: https://github.com/login/oauth/authorize
     resource:
