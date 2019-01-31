@@ -5,6 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>sso</module>
+        <module>sso-server</module>
+        <module>sso-client-one</module>
+        <module>sso-client-two</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

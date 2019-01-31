@@ -1,0 +1,19 @@
+auth:
+  server: http://localhost:8082/uaa
+server:
+  port: 8083
+  servlet:
+    context-path: /client-one
+security:
+  oauth2:
+    client:
+      client-id: sso-server
+      client-secret: 123456
+      # 请求认证的地址
+      user-authorization-uri: ${auth.server}/oauth/authorize
+      # 请求令牌的地址
+      access-token-uri: ${auth.server}/oauth/token
+    resource:
+      jwt:
+        # 解析jwt令牌所需要密钥的地址
+        key-uri: ${auth.server}/oauth/token_key
