@@ -40,12 +40,16 @@ public class SsoAuthorizationServerConfig extends AuthorizationServerConfigurerA
         clients.inMemory()
                 .withClient("sso-server")
                 .secret("{noop}123456")
+                .redirectUris("http://localhost:8083/client-one/login", "http://localhost:8084/client-two/login")
                 .authorizedGrantTypes("authorization_code", "refresh_token")
+                .autoApprove(true)
                 .scopes("all")
                 .and()
                 .withClient("sso-server-back")
                 .secret("{noop}123456")
+                .redirectUris("http://localhost:8083/client-one/login", "http://localhost:8084/client-two/login")
                 .authorizedGrantTypes("authorization_code", "refresh_token")
+                .autoApprove(true)
                 .scopes("all");
     }
 
