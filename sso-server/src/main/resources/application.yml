@@ -5,3 +5,6 @@ server:
 spring:
   freemarker:
     cache: true
+logging:
+  level:
+    org.springframework: debug

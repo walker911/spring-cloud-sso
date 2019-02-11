@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
  * @date 2019/1/31
  */
 @Component
-public class SsoUserDetailsService implements UserDetailsService {
+public class SsoUserDetailsServiceImpl implements UserDetailsService {
 
     @Autowired
     private PasswordEncoder passwordEncoder;

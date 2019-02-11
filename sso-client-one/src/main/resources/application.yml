@@ -17,3 +17,6 @@ security:
       jwt:
         # 解析jwt令牌所需要密钥的地址
         key-uri: ${auth.server}/oauth/token_key
+logging:
+  level:
+    org.springframework: debug
