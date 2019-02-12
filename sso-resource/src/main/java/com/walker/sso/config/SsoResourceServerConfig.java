@@ -19,7 +19,6 @@ public class SsoResourceServerConfig extends ResourceServerConfigurerAdapter {
         http.sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .csrf().disable()
                 .authorizeRequests()
                 .antMatchers(HttpMethod.GET, "/api/**").access("#oauth2.hasScope('read')")
                 .antMatchers(HttpMethod.POST, "/api/**").access("#oauth2.hasScope('write')");
