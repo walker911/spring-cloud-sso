@@ -41,8 +41,8 @@ public class SsoClientOneApplication {
     }
 
     @Bean
-    public OAuth2RestTemplate restTemplate(OAuth2ProtectedResourceDetails details) {
-        return new OAuth2RestTemplate(details);
+    public OAuth2RestTemplate restTemplate(OAuth2ProtectedResourceDetails details, OAuth2ClientContext context) {
+        return new OAuth2RestTemplate(details, context);
     }
 
     public static void main(String[] args) {
